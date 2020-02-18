@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="B62171D8FF027718">
+  <PROJECT FORMAT="1.00" NAME="Hugger &amp; Stoll; Heavy Industries" AUTHOR="Karim Hugger" CREATED="2019.08.17 12:25:42" MODIFIED="2019.08.23 11:33:18">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="RFID-Schließsystem Darstellung B" CREATED="2019.08.17 12:26:16" MODIFIED="2019.08.23 11:33:18">
+        <LAYOUT FORMAT="1.00" COLUMNS="7" ROWS="16">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="67">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="78">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="69">
+                <TEXT><![CDATA[Wurde der Button gedrückt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="64">
+                <TEXT><![CDATA[Ist die Tür verriegelt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[RFID-Schließsystem Darstellung B]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="2">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="184">
+                <TEXT><![CDATA[-Initialisierung der Variablen
+-Verbinden mit LCD und RFID-Reader
+-Deklaration der IO´s]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="3">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[LCD:
+-aktuellen Version 
+-einiger Randdaten]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="144">
+                <TEXT><![CDATA[LEDs:
+Grün =0
+Gelb =1
+Rot =0
+Zustand: entsperrt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapLoopStart" FORMAT="1.00" ID="8" ASSOCIATE="10">
+                <TEXT><![CDATA[Hauptschleife]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="55">
+                <TEXT><![CDATA[Liegt eine Karte vor dem Scanner?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="7">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="153">
+                <TEXT><![CDATA[Buzzer:
+Akustisches Feedback (Entsperrt)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="8">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="149">
+                <TEXT><![CDATA[Zustand: entsperrt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="89">
+                <TEXT><![CDATA[Relais zieht an
+LEDs:
+Grün =1
+Gelb =0
+Rot =0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="10">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="28">
+                <TEXT><![CDATA[LCD:
+"Schrank geoeffnet" und ein Ladebalken werden angezeigt.]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="11">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="119">
+                <TEXT><![CDATA[Nach (x) Sekunden:
+Relais fällt ab
+LEDs:
+Grün =0
+Gelb =1
+Rot =0]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="131">
+                <TEXT><![CDATA[LCD:
+"-Schrank entriegelt-" 
+"Druecken Sie den Taster zum oeffnen"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="14">
+              <FIGURE SUBTYPE="PapLoopEnd" FORMAT="1.00" ID="10" ASSOCIATE="8">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="15">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="7">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="178">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="8">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="186">
+                <TEXT><![CDATA[LCD:
+"Adminrecht aktiviert]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="3" ROW="9">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="219">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="6">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="16">
+                <TEXT><![CDATA[Ist der Schrank gesperrt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="7">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="22">
+                <TEXT><![CDATA[Stimmt die Karten-ID mit der hinterlegten ID überein]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="9">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="175">
+                <TEXT><![CDATA[Wurden die Adminanforderungen erfüllt?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="10">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="156">
+                <TEXT><![CDATA[Buzzer:
+Akustisches Feedback 
+(falsche Karte)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="4" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="141">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="6">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="148">
+                <TEXT><![CDATA[Zustand: gesperrt]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="7">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="151">
+                <TEXT><![CDATA[Buzzer:
+Akustisches Feedback 
+(gesperrt)]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="9">
+              <FIGURE SUBTYPE="PapActivity" FORMAT="1.00" ID="167">
+                <TEXT><![CDATA[LEDs:
+Grün =0
+Gelb =0
+Rot =1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="10">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="160">
+                <TEXT><![CDATA[LCD: 
+"-Schrank verriegelt-"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="11">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="158">
+                <TEXT><![CDATA[Ist die Karte mit einem Nutzer verknüpft?]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="38">
+                <TEXT><![CDATA[LCD:
+"User ID:" +Name]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="5" ROW="14">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="214">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="11">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="206">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="12">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="165">
+                <TEXT><![CDATA[LCD:
+"User ID: Gast"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="6" ROW="13">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="209">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="227" FROM="1" TO="184" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="11" FROM="10" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="223" FROM="64" TO="89" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="104" FROM="55" TO="16" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="9" FROM="8" TO="55" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="115" FROM="89" TO="28" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="155" FROM="153" TO="149" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="142" FROM="141" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="213" FROM="52" TO="214" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="80" FROM="78" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="216" FROM="214" TO="141" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="39" FROM="38" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="82" FROM="69" TO="64" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="58" FROM="55" TO="69" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="138" FROM="148" TO="151" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="81" FROM="69" TO="67" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="71" FROM="67" TO="78" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="106" FROM="16" TO="148" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="137" FROM="16" TO="22" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="226" FROM="184" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="116" FROM="28" TO="119" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="162" FROM="131" TO="10" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="179" FROM="178" TO="153" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="120" FROM="119" TO="131" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="217" FROM="156" TO="141" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="228" FROM="4" TO="144" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="225" FROM="144" TO="8" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="150" FROM="149" TO="89" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="152" FROM="151" TO="167" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="159" FROM="158" TO="38" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="161" FROM="160" TO="158" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="208" FROM="206" TO="165" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="168" FROM="167" TO="160" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="222" FROM="175" TO="156" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="134" FROM="22" TO="178" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="192" FROM="186" TO="178" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="210" FROM="165" TO="209" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="199" FROM="22" TO="175" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="221" FROM="219" TO="186" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="207" FROM="158" TO="206" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="211" FROM="209" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="224" FROM="175" TO="219" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
